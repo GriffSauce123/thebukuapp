@@ -4,7 +4,7 @@
 :root {
     --primary-color: #000000; /* Black */
     --secondary-color: #ffffff; /* White */
-    --accent-color: #8B0000; /* Deep Red */
+    --accent-color: #9b0000; /* Dark Crimson */
     --gray-light: #f5f5f5; /* Light Gray */
     --gray-dark: #333333; /* Dark Gray */
 }
@@ -38,9 +38,9 @@ a:hover {
 
 /* Container */
 .landing-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 /* Hero Section */
@@ -48,6 +48,7 @@ a:hover {
     text-align: center;
     padding: 100px 20px;
     background-color: var(--gray-light);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .hero h1 {
@@ -65,6 +66,7 @@ a:hover {
 .core-values {
     padding: 50px 20px;
     text-align: center;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .core-values h2 {
@@ -83,7 +85,7 @@ a:hover {
     margin: 10px;
     padding: 20px;
     background-color: var(--gray-light);
-    border-radius: 10px;
+    border: 1px solid var(--primary-color);
 }
 
 .value h3 {
@@ -95,6 +97,7 @@ a:hover {
 /* Timeline Section */
 .timeline {
     padding: 50px 20px;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .timeline h2 {
@@ -112,64 +115,58 @@ a:hover {
     background-color: var(--gray-light);
     margin: 10px 0;
     padding: 20px;
-    border-left: 5px solid var(--accent-color);
-}
-
-.timeline li strong {
-    color: var(--accent-color);
+    border: 1px solid var(--primary-color);
 }
 
 /* Template Listing Section */
 .template-listing {
     padding: 50px 20px;
-    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .template-listing h2 {
     font-size: 2.5em;
+    text-align: center;
     margin-bottom: 1em;
 }
 
 .listing {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    background-color: var(--gray-light);
+    border: 1px solid var(--primary-color);
     padding: 20px;
-    border-radius: 10px;
 }
 
 .listing-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     margin-right: 20px;
+    border: 1px solid var(--primary-color);
 }
 
 .listing-details {
-    max-width: 600px;
-    text-align: left;
+    flex: 1;
 }
 
 .listing-title {
-    font-size: 2em;
+    font-size: 1.5em;
+    color: var(--accent-color);
     margin-bottom: 0.5em;
 }
 
 .listing-description {
-    font-size: 1.2em;
     margin-bottom: 0.5em;
 }
 
 .listing-price {
-    font-size: 1.5em;
-    color: var(--accent-color);
+    font-weight: bold;
 }
 
 /* Template Conversation Section */
 .template-conversation {
     padding: 50px 20px;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .template-conversation h2 {
@@ -179,57 +176,34 @@ a:hover {
 }
 
 .conversation {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--gray-light);
+    border: 1px solid var(--primary-color);
     padding: 20px;
-    border-radius: 10px;
 }
 
 .message {
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
-.buyer {
-    background-color: var(--secondary-color);
-    border: 1px solid var(--gray-dark);
+.message p {
+    margin: 0;
 }
 
-.seller {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
+.buyer p {
+    color: var(--accent-color);
+}
+
+.seller p {
+    color: var(--primary-color);
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--gray-dark);
-    color: var(--secondary-color);
+    background-color: var(--gray-light);
+    border-top: 2px solid var(--primary-color);
 }
 
 .footer p {
     margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .values {
-        flex-direction: column;
-    }
-
-    .listing {
-        flex-direction: column;
-    }
-
-    .listing-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .listing-details {
-        text-align: center;
-    }
 }
