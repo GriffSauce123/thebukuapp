@@ -1,0 +1,235 @@
+/* styles.css */
+
+/* Color Palette */
+:root {
+    --primary-color: #000000; /* Black */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #8B0000; /* Deep Red */
+    --gray-light: #f5f5f5; /* Light Gray */
+    --gray-dark: #333333; /* Dark Gray */
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--gray-light);
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero .tagline {
+    font-size: 1.5em;
+    color: var(--gray-dark);
+}
+
+/* Core Values Section */
+.core-values {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.core-values h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.value {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--gray-light);
+    border-radius: 10px;
+}
+
+.value h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--accent-color);
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 50px 20px;
+}
+
+.timeline h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.timeline ol {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    background-color: var(--gray-light);
+    margin: 10px 0;
+    padding: 20px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.timeline li strong {
+    color: var(--accent-color);
+}
+
+/* Template Listing Section */
+.template-listing {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.template-listing h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-light);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.listing-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.listing-details {
+    max-width: 600px;
+    text-align: left;
+}
+
+.listing-title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.listing-description {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.listing-price {
+    font-size: 1.5em;
+    color: var(--accent-color);
+}
+
+/* Template Conversation Section */
+.template-conversation {
+    padding: 50px 20px;
+}
+
+.template-conversation h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.conversation {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--gray-light);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.buyer {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--gray-dark);
+}
+
+.seller {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--gray-dark);
+    color: var(--secondary-color);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .values {
+        flex-direction: column;
+    }
+
+    .listing {
+        flex-direction: column;
+    }
+
+    .listing-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .listing-details {
+        text-align: center;
+    }
+}
