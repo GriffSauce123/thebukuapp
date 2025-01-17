@@ -4,7 +4,7 @@
 :root {
     --primary-color: #000000; /* Black */
     --secondary-color: #ffffff; /* White */
-    --accent-color: #9b0000; /* Dark Crimson */
+    --accent-color: #440022; /* Dark Crimson */
     --gray-light: #f5f5f5; /* Light Gray */
     --gray-dark: #333333; /* Dark Gray */
 }
@@ -12,14 +12,20 @@
 /* Global Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     color: var(--primary-color);
     background-color: var(--secondary-color);
     line-height: 1.6;
 }
 
+* {
+    transition: 0.15s ease;
+}
+
 h1, h2, h3 {
-    color: var(--primary-color);
+    font-family: serif;
+    text-transform: uppercase;
+    color: var(--accent-color);
     margin-bottom: 0.5em;
 }
 
@@ -46,20 +52,20 @@ a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: var(--gray-light);
-    border-bottom: 2px solid var(--primary-color);
+    padding: 50px 20px;
+    background-color: var(--accent-color);
 }
 
 .hero h1 {
+    color: var(--secondary-color);
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .hero .tagline {
+    color: var(--gray-light);
     font-size: 1.5em;
-    color: var(--gray-dark);
 }
 
 /* Core Values Section */
@@ -96,6 +102,8 @@ a:hover {
 
 /* Timeline Section */
 .timeline {
+    margin: auto;
+    max-width: 1024px;
     padding: 50px 20px;
     border-bottom: 2px solid var(--primary-color);
 }
@@ -112,16 +120,23 @@ a:hover {
 }
 
 .timeline li {
-    background-color: var(--gray-light);
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 20px;
-    border: 1px solid var(--primary-color);
+    border-left: solid 5px var(--accent-color);
 }
 
 /* Template Listing Section */
 .template-listing {
+    margin: auto;
     padding: 50px 20px;
     border-bottom: 2px solid var(--primary-color);
+    max-width: 1024px;
+}
+
+.template-listing .grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .template-listing h2 {
@@ -131,37 +146,63 @@ a:hover {
 }
 
 .listing {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--primary-color);
+    margin: auto;
+    background: var(--accent-color);
     padding: 20px;
+    max-width: 350px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
 }
 
 .listing-image {
-    width: 150px;
-    height: 150px;
+    background: var(--secondary-color);
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 320px;
     object-fit: cover;
-    margin-right: 20px;
-    border: 1px solid var(--primary-color);
 }
 
 .listing-details {
-    flex: 1;
+    margin: auto;
 }
 
 .listing-title {
     font-size: 1.5em;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     margin-bottom: 0.5em;
 }
 
 .listing-description {
     margin-bottom: 0.5em;
+    color: var(--gray-light);
 }
 
 .listing-price {
     font-weight: bold;
 }
+
+.tags * {
+    display: inline-block;
+    border: thin solid var(--gray-light);
+    background: #ffffff25;
+    padding: 5px 10px;
+}
+
+.listing a {
+    background-color: var(--secondary-color);
+    border: solid thin var(--secondary-color);
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.listing a:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
 
 /* Template Conversation Section */
 .template-conversation {
@@ -176,25 +217,51 @@ a:hover {
 }
 
 .conversation {
-    border: 1px solid var(--primary-color);
-    padding: 20px;
+    margin: auto;
+    max-width: 350px;
+}
+
+.buyer {
+    margin-right: auto;
+    background-color:#44002230;
+    border-color: #7a003d !important;
+    
+}
+
+.seller {
+    margin-left: auto;
+    background-color:#08460030;
+    border-color: #14a800 !important;
 }
 
 .message {
+    width: fit-content;
+    max-width: 220px;
+    display: block;
+    padding: 5px 10px;
     margin-bottom: 10px;
+    border: solid thin var(--accent-color);
 }
 
 .message p {
     margin: 0;
 }
 
-.buyer p {
-    color: var(--accent-color);
+.template-message {
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    background: var(--gray-light);
+    border: solid thin #888;
+    color: #888;
+    position: relative;
 }
 
-.seller p {
-    color: var(--primary-color);
+.template-message:hover {
+    border-color: var(--gray-dark);
+    cursor: pointer;
 }
+
 
 /* Footer */
 .footer {
@@ -206,4 +273,10 @@ a:hover {
 
 .footer p {
     margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .template-listing .grid {
+        grid-template-columns: auto !important;
+    }
 }
