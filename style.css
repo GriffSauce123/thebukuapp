@@ -53,7 +53,7 @@ a:hover {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .hero h1 {
@@ -122,7 +122,7 @@ a:hover {
 .timeline li {
     margin: 20px 0;
     padding: 20px;
-    border-left: solid 5px var(--accent-color);
+    border-left: solid 5px var(--primary-color);
 }
 
 /* Template Listing Section */
@@ -147,7 +147,7 @@ a:hover {
 
 .listing {
     margin: auto;
-    background: var(--accent-color);
+    background: var(--primary-color);
     padding: 20px;
     max-width: 350px;
     color: var(--secondary-color);
